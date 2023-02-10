@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+#include<cstdlib>
+#include<cstring>
+using namespace std;
+int main() {
+    // Write C++ code here
+    srand(time(0));
+    const char* a[3]={"Rock","Paper","Scissor"};
+    char user[10];
+    int i=1;
+    while(i==1){
+    int index = rand()%3;
+    cin>>user;
+    cout<<a[index];
+    if(strcmp("Rock",user)==0 && strcmp("Paper",a[index])==0)
+    {
+        cout<<"You lost";
+    }
+    if(strcmp("Rock",user)==0 && strcmp("Scissor",a[index])==0)
+    {
+        cout<<"You won";
+    }
+    if(strcmp("Rock",user)==0 && strcmp("Rock",a[index])==0)
+    {
+        cout<<"Draw";
+    }
+    if(strcmp("Scissor",user)==0 && strcmp("Paper",a[index])==0)
+    {
+        cout<<"You won";
+    }
+    if(strcmp("Scissor",user)==0 && strcmp("Rock",a[index])==0)
+    {
+        cout<<"You lost";
+    }
+    if(strcmp("Scissor",user)==0 && strcmp("Scissor",a[index])==0)
+    {
+        cout<<"Draw";
+    }
+    if(strcmp("Paper",user)==0 && strcmp("Rock",a[index])==0)
+    {
+        cout<<"You won";
+    }
+    if(strcmp("Paper",user)==0 && strcmp("Scissor",a[index])==0)
+    {
+        cout<<"You lost";
+    }
+    if(strcmp("Paper",user)==0 && strcmp("Paper",a[index])==0)
+    {
+        cout<<"Draw";
+    }
+}
+    return 0;
+}
